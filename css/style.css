@@ -1,0 +1,161 @@
+:root {
+  --background-color-main: rgba(91, 78, 26, 0.5);
+  --font-color: rgba(246, 244, 238 );
+  --pokemon-button-color:  rgba(26, 71, 79);
+  --hover-color: rgba(250, 32, 153, 0.8);
+  --font-size-main: 16px;
+  --font-big: 24px;
+  --sans: "Nova Mono", monospace;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-size-main);
+  background-color: var(--background-color-main);
+  text-align: center;
+}
+
+h1,
+li {
+  font-family: var(--sans);
+  font-size: var(--font-big);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.header {
+  padding: 2%;
+  margin-bottom: 20px;
+}
+
+#logo {
+  padding: 8px;
+  width: 50%;
+  margin-left: 100px;
+  position: relative;
+}
+
+.orbit {
+  width: 5%;
+  height: 10%;
+  padding: 5px;
+  margin-top: 5%;
+}
+
+@-webkit-keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  -webkit-animation: 3s orbit-rotatee alternate infinite;
+  -moz-animation: orbit-rotate 3s alternate infinite;
+  -o-animation: orbit-rotate 3s alternate infinite;
+  animation: 3s orbit-rotate alternate infinite;
+  animation-delay: -0.5s;
+}
+
+.mouse {
+  background-color: #d94a38;
+  text-align: center;
+  width: 40%;
+  height: 5%;
+  padding: 20px;
+  margin-left: 30%;
+  margin-bottom: 4%;
+}
+
+#searchBar {
+  padding: 20px;
+  width: 40%;
+}
+/* MAIN AREA == Pokemon List */
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  flex: 1 1 0;
+  padding: 10px;
+  opacity: 60%;
+}
+
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons {
+  width: 250px;
+  background-color: var(--pokemon-button-color);
+  color:  var(--font-color);
+  padding: 20px;
+  margin-left: 100px;
+  border-radius: 20px;
+  border: none;
+}
+/*
+.buttons:hover,
+.buttons:focus:active{
+  cursor: pointer;
+  opacity: 80%;
+  background-color: var(--hover-color);
+}
+
+.buttons:focus {
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+} */
+
+button {
+  border-radius: 30px;
+}
+
+#btn-back-to-top {
+  position: relative;
+  padding: 5px;
+  bottom: 20px;
+  margin-left: 85%;
+  /* right: 5px; */
+  cursor: pointer;
+  box-shadow: none;
+  display: none;
+}
+
+
+.btn {
+  padding: 5px;
+  margin-right: 120px;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    max-width: 100%;
+  }
+}
