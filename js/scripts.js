@@ -1,3 +1,4 @@
+//  ====== start ======
 let pokemonRepository = (function () {
   let pokemonList = [];
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -154,7 +155,7 @@ function add(pokemon) {
    showModal: showModal
  };
 }) ();
-//  ======================
+//  ====================== end ======
 
 pokemonRepository.loadList().then(function() {
   // Now the data is loaded!
