@@ -4,14 +4,17 @@ let pokemonRepository = (function () {
   let searchInput = document.querySelector("#searchBar");
 
 
-function showLoadingMessage() {
-  document.querySelector('.loading-message').classList.add('visible');
-}
+  function showLoadingMessage() {
+    document.querySelector('.loading-message').classList.add('visible');
+  }
 
-function hideLoadingMessage() {
-  document.querySelector('.loading-message').classList.add('hidden');
-}
+  function hideLoadingMessage() {
+    document.querySelector('.loading-message').classList.add('hidden');
+  }
 
+  $(document).ready(function() {
+    $('.loading-message').hide();
+  });
 
  // returns an array of all the Pokémon in pokemonList
  function getAll() {
@@ -31,7 +34,7 @@ function add(pokemon) {
 
  // adds new Pokémon to the pokemonList array with a conditional to make sure the correct type of data is entered.
  function addListItem(pokemon){
-   let pokemonList = document.querySelector(".pokemon-list");
+   let pokemonList = document.querySelector(".pokemonList");
 
    let listPokemon = document.createElement("li");
     listPokemon.classList.add("group-list-item");
@@ -150,8 +153,8 @@ function add(pokemon) {
    showDetails: showDetails,
    showModal: showModal
  };
-})();
-
+}) ();
+//  ======================
 
 pokemonRepository.loadList().then(function() {
   // Now the data is loaded!
@@ -177,8 +180,8 @@ let mybutton = document.getElementById('btn-back-to-top');
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
   ) {
     mybutton.style.display = 'block';
   } else {
