@@ -1,4 +1,4 @@
-# pokemon-app
+# pokemon_app
  CF JS Ex 1.2
  CF JS Ex. 1.7 Add API 
  
@@ -17,4 +17,7 @@ CF JS Ex. 1.11 (8/6/2021) Adding:
  JavaScript
  
  Libraries: jQuery, Bootstrap 
+ 
+
+Fixed on 8/21/2021
  
